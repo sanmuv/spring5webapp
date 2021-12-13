@@ -38,13 +38,13 @@ public class BootStrapData implements CommandLineRunner {
         publisherRepository.save(apress);
 
         Author yashwanth = new Author("Yashwant", "Kanetkar");
-        Book patienceProgramming = new Book("Let us C", UUID.randomUUID().toString());
+        Book let_us_c = new Book("Let us C", UUID.randomUUID().toString());
 
-        yashwanth.getBooks().add(patienceProgramming);
-        patienceProgramming.getAuthors().add(yashwanth);
+        yashwanth.getBooks().add(let_us_c);
+        let_us_c.getAuthors().add(yashwanth);
 
         authorRepository.save(yashwanth);
-        bookRepository.save(patienceProgramming);
+        bookRepository.save(let_us_c);
 
         System.out.println("Started in Bootstrap");
         System.out.println("Books count " + bookRepository.count());
